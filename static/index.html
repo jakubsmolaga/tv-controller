@@ -11,6 +11,14 @@
 
 <body>
     <h1>TV Controller</h1>
+    <button onclick="send('turnoff')">Turn Off</button>
+    <button onclick="send('turnon')">Turn On</button>
+    <button onclick="send('reboot')">Reboot</button>
+    <button onclick="send('select-hdmi1')">Select HDMI1</button>
+    <button onclick="send('select-displayport')">Select Display Port (PC)</button>
+    <script>
+        const send = cmd => fetch(`/api/${cmd}`, { method: 'POST' })
+    </script>
 </body>
 
 </html>
