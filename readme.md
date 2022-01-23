@@ -9,7 +9,7 @@ To download and run this program open the terminal on your linux machine and exe
 ```bash
 wget https://github.com/smolagakuba/tv-controller/releases/download/v0.0.1/tv-controller
 chmod +x ./tv-controller
-./tv-controller -port=/dev/ttyXX
+sudo ./tv-controller -port=/dev/ttyXX
 ```
 Where `ttyXX` is the name of your serial port.  
 If everything worked as expected then you should see a message like this one:  
