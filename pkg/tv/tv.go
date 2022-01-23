@@ -22,7 +22,7 @@ func Init(port string) TV {
 }
 
 func (tv TV) sendCommand(c1 byte, c2 byte, d byte) {
-	_, err := tv.s.Write([]byte{c1, c2, ' ', 0x00, ' ', d, '\r'})
+	_, err := tv.s.Write([]byte{c1, c2, ' ', 0x00, ' ', d, '\r', '\n'})
 	if err != nil {
 		log.Fatal(err)
 	}
