@@ -25,4 +25,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: '*'
+        releaseId: ${{ needs.create_release.outputs.id }}
+        args: 'tv-controller'
